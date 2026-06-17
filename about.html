@@ -44,11 +44,10 @@
 .info-block ul { list-style:none; }
 .info-block ul li { font-size:14px; font-weight:300; color:#ddd; padding:10px 0; border-bottom:1px solid #1e1e1e; line-height:1.5; display:flex; gap:12px; }
 .info-block ul li::before { content:'→'; color:#0057C8; flex-shrink:0; font-size:12px; margin-top:2px; }
-.attire-list li { display:block !important; }
-.attire-list li::before { display:none !important; }
-.attire-list li strong { display:block; font-size:15px; color:#fff; font-weight:700; margin-bottom:4px; }
-.attire-list li span { display:flex; gap:8px; align-items:flex-start; font-weight:300; color:#aaa; font-size:14px; line-height:1.6; }
-.attire-list li span::before { content:'→'; color:#0057C8; flex-shrink:0; font-size:12px; margin-top:3px; }
+.attire-list li { display:flex !important; gap:12px; align-items:flex-start; }
+.attire-list li > div { display:flex; flex-direction:column; gap:4px; }
+.attire-list li strong { font-size:15px; color:#fff; font-weight:700; }
+.attire-list li span { font-weight:300; color:#aaa; font-size:14px; line-height:1.6; }
 .tuition-note { font-size:13px; font-weight:300; color:#aaa; line-height:1.7; }
 .tuition-note strong { color:#fff; font-weight:600; }
 
@@ -253,11 +252,11 @@
     <div class="info-block fade-up">
       <h3>Hair &amp; Attire</h3>
       <ul class="attire-list">
-        <li><strong>Ballet</strong><span>Hair in a bun, studio leotard, tights, ballet slippers. Males: white T-shirt, black shorts, ballet slippers.</span></li>
-        <li><strong>Jazz, Lyrical, Acro, Tap</strong><span>Studio shorts &amp; top, hair pulled away from face. Proper shoes for each class.</span></li>
-        <li><strong>Ballroom</strong><span>Studio skirt required. Ballroom heels.</span></li>
-        <li><strong>Hip-Hop</strong><span>Baggy clothing and sneakers. Hats and accessories welcome.</span></li>
-        <li><strong>John &amp; Cookie Classes</strong><span>Studio Lycra shorts. Female: studio half top. Males: tank top or T-shirt.</span></li>
+        <li><div><strong>Ballet</strong><span>Hair in a bun, studio leotard, tights, ballet slippers. Males: white T-shirt, black shorts, ballet slippers.</span></div></li>
+        <li><div><strong>Jazz, Lyrical, Acro, Tap</strong><span>Studio shorts &amp; top, hair pulled away from face. Proper shoes for each class.</span></div></li>
+        <li><div><strong>Ballroom</strong><span>Studio skirt required. Ballroom heels.</span></div></li>
+        <li><div><strong>Hip-Hop</strong><span>Baggy clothing and sneakers. Hats and accessories welcome.</span></div></li>
+        <li><div><strong>John &amp; Cookie Classes</strong><span>Studio Lycra shorts. Female: studio half top. Males: tank top or T-shirt.</span></div></li>
       </ul>
       <p style="margin-top:16px;font-size:12px;color:#666;">Contact the Studio Manager about ordering studio attire.</p>
     </div>
