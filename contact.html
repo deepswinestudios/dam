@@ -551,7 +551,7 @@
 <script>
 (function() {
   var map = L.map('studioMap', { scrollWheelZoom: false, zoomControl: true })
-             .setView([25.6565, -80.4282], 16);
+             .setView([25.645143428174183, -80.4119356036284], 16);
 
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -567,7 +567,7 @@
     popupAnchor: [0, -14]
   });
 
-  L.marker([25.6565, -80.4282], { icon: pin })
+  L.marker([25.645143428174183, -80.4119356036284], { icon: pin })
     .addTo(map)
     .bindPopup('<strong style="font-family:sans-serif;">Dance Attack Miami</strong><br><span style="font-size:12px;color:#555;">13438 SW 131st Street<br>Miami, FL 33186</span>')
     .openPopup();
