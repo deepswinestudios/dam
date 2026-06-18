@@ -32,7 +32,7 @@
 /* Contact card grid */
 .contact-card-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 4px;
   margin-bottom: 4px;
 }
@@ -160,7 +160,7 @@
 /* Hours & location section */
 .info-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 4px;
 }
 
@@ -316,11 +316,9 @@
 }
 
 @media(max-width:1024px) {
-  .contact-card-grid { grid-template-columns: 1fr; }
   .contact-card.primary { grid-column: span 1; padding: 36px 28px; }
   .contact-card.primary .contact-value { font-size: 24px; }
   .contact-card { padding: 28px 24px; }
-  .info-section { grid-template-columns: 1fr; }
   .info-block { padding: 36px 24px; }
   .social-section { padding: 48px 24px; }
   .contact-hero-content { padding: 0 24px 48px; }
