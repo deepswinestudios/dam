@@ -1,0 +1,14 @@
+/*
+  REMOVED from contact.html — orphaned CSS (syntax error)
+  These declarations were left dangling after a .map-placeholder-label
+  selector was deleted when the Google Maps placeholder was replaced
+  with the Leaflet.js map. The selector was gone but the closing brace
+  and properties remained, causing an invalid CSS rule.
+*/
+
+/* Orphaned remnant (was part of .map-placeholder-label) */
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #1e2a3a;
+}

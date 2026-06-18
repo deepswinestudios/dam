@@ -1,0 +1,24 @@
+/*
+  REMOVED from gallery.html — video thumbnail UI
+  Replaced with native <video> element in the Watch section.
+*/
+
+/* Placeholder photo items */
+.photo-placeholder { background:linear-gradient(135deg,#111,#1a1a1a); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; }
+.photo-placeholder.tall { aspect-ratio:3/4; }
+.photo-placeholder span { font-family:'Montserrat',sans-serif; font-weight:900; font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:#222; }
+
+/* Video thumbnail grid (3-up) */
+.video-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:4px; margin-top:4px; }
+.video-thumb { position:relative; aspect-ratio:16/9; background:#000; overflow:hidden; cursor:pointer; }
+.video-thumb-bg { width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.6); transition:filter .3s; }
+.video-thumb:hover .video-thumb-bg { filter:brightness(0.8); }
+.video-play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; }
+.play-icon { width:52px; height:52px; background:#0057C8; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:transform .2s,background .2s; }
+.video-thumb:hover .play-icon { transform:scale(1.1); background:#0048A8; }
+.play-icon svg { width:20px; height:20px; margin-left:4px; }
+.video-label { font-family:'Montserrat',sans-serif; font-weight:700; font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:#fff; }
+
+/* Responsive overrides (also removed) */
+@media(max-width:1024px){ .video-grid { grid-template-columns:1fr 1fr; } }
+@media(max-width:580px){  .video-grid { grid-template-columns:1fr; } }

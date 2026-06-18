@@ -1,0 +1,24 @@
+/*
+  REMOVED from index.html — hero video CSS stubs
+  The corresponding <video> element is commented out in the HTML.
+  Restore when a hero video file is ready to use.
+  See the commented-out block in index.html:
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
+      <source src="hero-reel.mp4" type="video/mp4">
+    </video>
+*/
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  display: none;
+}
+
+.hero-video.loaded { display: block; }
+
+.hero-bg.video-active img { display: none; }
