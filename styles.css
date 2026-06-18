@@ -74,7 +74,7 @@ nav.top-nav.scrolled { height: 68px; background: #000; border-bottom-color: var(
 .mobile-menu .m-close:hover { color: var(--white); }
 
 /* ── PAGE HERO (inner pages) ── */
-.page-hero { position: relative; height: 70vh; display: flex; align-items: flex-end; overflow: hidden; margin-top: 0; }
+.page-hero { position: relative; height: 82vh; display: flex; align-items: flex-end; overflow: hidden; margin-top: 0; }
 .page-hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg,#0a1020 0%,#0d1a35 60%,#080c18 100%); }
 .page-hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top,rgba(13,13,13,.92) 0%,rgba(13,13,13,.4) 60%,rgba(13,13,13,.15) 100%); }
@@ -137,5 +137,5 @@ footer { background: #000; border-top: 2px solid var(--blue); padding: 52px 56px
 
 @media (max-width: 580px) {
   .footer-grid { grid-template-columns: 1fr; }
-  .page-hero { height: 50vh; }
+  .page-hero { height: 60vh; }
 }
