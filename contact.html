@@ -6,6 +6,7 @@
 <title>Contact — Dance Attack Miami</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <style>
 /* Contact page specific */
 .contact-hero {
@@ -305,17 +306,8 @@
 
 /* Map embed */
 .map-section {
-  height: 400px;
+  height: 420px;
   border-top: 3px solid #0057C8;
-  position: relative;
-  overflow: hidden;
-}
-.map-section iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-  filter: invert(90%) hue-rotate(180deg);
 }
   font-size: 11px;
   letter-spacing: .2em;
@@ -446,12 +438,7 @@
 
 <!-- MAP -->
 <div class="map-section">
-  <iframe
-    src="https://www.openstreetmap.org/export/embed.html?bbox=-80.4382%2C25.6515%2C-80.4182%2C25.6615&layer=mapnik&marker=25.6565%2C-80.4282"
-    loading="lazy"
-    allowfullscreen
-    title="Dance Attack Miami location map">
-  </iframe>
+  <div id="studioMap" style="height:100%;width:100%;"></div>
 </div>
 
 <!-- SOCIAL -->
@@ -560,5 +547,31 @@
 </nav>
 
 <script src="nav.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function() {
+  var map = L.map('studioMap', { scrollWheelZoom: false, zoomControl: true })
+             .setView([25.6565, -80.4282], 16);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 20
+  }).addTo(map);
+
+  var pin = L.divIcon({
+    className: '',
+    html: '<div style="width:18px;height:18px;background:#0057C8;border:3px solid #fff;border-radius:50%;box-shadow:0 2px 10px rgba(0,0,0,0.35);"></div>',
+    iconSize: [18, 18],
+    iconAnchor: [9, 9],
+    popupAnchor: [0, -14]
+  });
+
+  L.marker([25.6565, -80.4282], { icon: pin })
+    .addTo(map)
+    .bindPopup('<strong style="font-family:sans-serif;">Dance Attack Miami</strong><br><span style="font-size:12px;color:#555;">13438 SW 131st Street<br>Miami, FL 33186</span>')
+    .openPopup();
+})();
+</script>
 </body>
 </html>
